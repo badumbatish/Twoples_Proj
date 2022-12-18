@@ -92,6 +92,10 @@ class CL:
 
     def mult_CL_Jstrat(q = -1, inputList = None):
         q, inputList = CL.get_input(q, inputList)
+        
+        if(CL.mult_CL_Jcond(q,inputList) > 1):
+            print("Jasmine cannot figure out a winning strategy.")
+            return
 
 
         tempList = list(inputList)
@@ -117,4 +121,4 @@ class CL:
             print("Updated list")
             print(tempList)
             tempQ = tempQ - 1
-        pass
+            pass
